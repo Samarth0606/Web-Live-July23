@@ -1,0 +1,60 @@
+
+
+/* descendant combinator */
+
+/* #yukta nav h1{
+    font-size: 100px;
+    color: rgb(149, 144, 144);
+    text-decoration: line-through;
+} */
+
+header nav h1{
+    font-size: 100px;
+    color: rgb(149, 144, 144);
+    /* text-decoration: line-through; */
+    /* text-decoration: underline; */
+    text-decoration: overline;
+}
+
+
+header h1{
+    font-size: 100px;
+    color: rgb(149, 144, 144);
+    text-decoration: line-through;
+}
+
+
+/* ------------------------------------------- */
+
+/* child combinator */
+
+/* main>section>ul>.vohra{
+    color: pink;
+    font-size: 40px;
+} */
+
+/* section>ul>.vohra{
+    color: pink;
+    font-size: 40px;
+} */
+
+ul > .vohra{
+    color: pink;
+    font-size: 40px;
+}
+
+/* ---------------------------------- */
+/* only neeche vaale not upar vaale */
+
+/* adjacent sibling -> 1 */
+
+main article h1 + p{
+    color: red;
+    font-size: 35px;
+}
+
+/* general sublings -> bohat saare */
+/* main article h1 ~ p{
+    color: red;
+    font-size: 35px;
+} */

@@ -1,0 +1,49 @@
+
+/* element selector */
+h1{
+    color: red;
+}
+h2{
+    font-size: 50px;
+}
+h3{
+    background-color: beige;
+}
+
+/* ID selector */
+
+#samarth{
+    font-size: 50px;
+    color: darkkhaki;
+    text-decoration: line-through;
+    background-color: rgb(201, 113, 175);
+}
+
+/* Class seelctor */
+.vohra{
+    font-size: 20px;
+    color: rgb(82, 204, 238);
+    text-decoration: underline;
+    background-color: green;
+}
+
+
+/* Attribute selector */
+a[href="http://google.com"]{
+    color: red;
+    font-size: 50px;
+    text-decoration: line-through;
+}
+
+input[type="password"]{
+    color: green;
+    font-size: larger;
+}
+
+
+/* universal selector */
+*{
+    border: 5px solid red;
+    /* border: 5px dashed red;  width type color */
+    /* border: 5px dotted red; */
+}
