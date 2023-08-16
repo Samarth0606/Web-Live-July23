@@ -1,0 +1,87 @@
+div{
+    height: 200px;
+    width: 200px;
+    border: 2px solid black;
+    background-color: rgb(149, 162, 162);
+}
+
+/* 1. hover state */
+/* div:hover{
+    cursor: pointer;
+    background-color: aquamarine;
+    border: 30px dotted green;
+} */
+
+/* 2. focus state */
+
+/* input{
+    background-color: blue;
+    font-size: 50px;
+}
+
+input:hover{
+    background-color: red;
+}
+
+input:focus{
+    background-color: goldenrod;
+    font-size: 80px;
+} */
+
+/* active state */
+
+div:active{
+    background-color: violet;
+    border: 10px solid red;
+}
+
+
+/*v:first-child */
+
+
+/* ul > li:first-child{
+    color: rgb(17, 93, 93);
+    font-size: 50px;
+    border: 5px solid red;
+} */
+
+
+/* last child */
+/* ul > li:last-child{
+    font-size: 100px;
+    background-color: darkblue;
+} */
+
+
+/* nth--of-type */
+/* li:nth-of-type(4){
+    color: green;
+    font-size: 30px;
+}
+
+
+li:nth-of-type(7){
+    color: fuchsia;
+}
+
+section div:nth-of-type(2){
+    background-color: aqua;
+    height: 100px;
+    width: 100px;
+    border: 1px solid black;
+} */
+
+li:nth-of-type(2n+3){
+    color: red;
+    font-size: 30px;
+}
+
+
+/* li:nth-of-type(2n + 3){
+    color: #bb2020;
+    font-size: 20px;
+} */
+li:nth-of-type(3n + 3){
+    color: #bb2020;
+    font-size: 20px;
+}

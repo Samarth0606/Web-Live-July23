@@ -1,0 +1,28 @@
+
+/* rgb */
+h1{
+    color: rgb(123, 34, 1);
+}
+
+
+/* rgba-> alpha */
+h2{
+    color: rgba(254, 12, 34, 0);
+    color: rgba(254, 12, 34, 1);
+    color: rgba(254, 12, 34, 0.5);
+}
+
+/* hexadecimal */
+h3{
+    color: #0f6b95; /*rrggbb*/
+}
+
+
+/* p{
+    color: #ff0000;
+} */
+
+p{
+    color: #ff0000ff; /* ff-> 1 , 00 -> 0*/
+}
+
