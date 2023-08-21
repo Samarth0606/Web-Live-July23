@@ -1,0 +1,27 @@
+
+
+
+h1{
+    font-size: 70px;
+    font-family:cursive;
+    /* font-weight: 500; */
+    text-align: center;
+    /* text-align: end; */
+
+    text-shadow: 5px 5px 12px red;
+    text-shadow: 5px -5px 12px red;
+}
+
+/* p{ */
+    /* line-height: 100px; */
+    /* letter-spacing: 10px; */
+    /* word-spacing: 20px; */
+/* } */
+
+
+
+
+
+
+
+
