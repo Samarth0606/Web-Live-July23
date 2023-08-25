@@ -1,0 +1,31 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.child{
+    width: 100px;
+    height: 100px;
+    transition-duration: 3s;
+}
+
+.parent:hover .child{
+    width: 100vw;
+}
+.child-1{
+    background-color: rgb(68, 232, 232);
+    /* transition-timing-function:linear ; constant speed */
+    transition-timing-function: cubic-bezier(.85,.7,0,.99);
+}
+.child-2{
+    background-color: rgb(60, 69, 69);
+    transition-timing-function:ease-in ;  /*fast at the end*/
+}
+.child-3{
+    background-color: rgb(229, 255, 0);
+    transition-timing-function:ease-out; /*fast at the start*/
+}
+.child-4{
+    background-color: rgb(255, 42, 0);
+    transition-timing-function: ease-in-out; /*slow at the start and fast in the middle and slow at end*/
+}
