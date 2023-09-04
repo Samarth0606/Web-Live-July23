@@ -1,0 +1,48 @@
+div{
+    width: 350px;
+    height: 300px;
+    border: 2px solid black;
+}
+
+.side-a{
+    background-color: rgb(158, 108, 42);
+    backface-visibility: hidden;
+    z-index: 10;
+
+}
+.side-b{
+    background-color: rgb(185, 235, 235);
+    transform: rotateY(180deg);
+}
+
+body{
+    perspective: 900px;
+}
+
+.wrapper{
+    position: relative;
+    width: 350px;
+    height: 300px;
+    transition-duration: 2s;
+    margin: 50px auto;
+    transform-style: preserve-3d;
+}
+
+.wrapper:hover{
+    transform: rotateY(180deg);
+}
+
+.side-a , .side-b{
+    position: absolute;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+}
+
+h2{
+    text-align: center;
+    font-family: cursive;
+    font-weight: bold;
+}
