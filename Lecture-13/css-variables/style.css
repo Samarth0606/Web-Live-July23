@@ -1,0 +1,10 @@
+
+:root{
+    --ye-mera-font-size-bada-hai : 85px;
+    --laalRang : rgb(234, 7, 7);
+}
+
+h1{
+    font-size: var(--ye-mera-font-size-bada-hai) ;
+    color: var(--laalRang) ;
+}
