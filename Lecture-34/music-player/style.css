@@ -1,0 +1,58 @@
+button{
+    background: none;
+    border: 0;
+}
+
+#progress{
+    cursor: pointer;
+}
+
+i{
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+
+#container{
+    width: 360px;
+    height: 500px;
+    margin: 50px auto;
+    text-align: center;
+    position: relative;
+    border: 2px solid black;
+}
+
+#play-section{
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+   
+}
+
+.sam{
+    width: 360px;
+    padding: 10px 0;
+}
+ul{
+    padding: 0;
+}
+
+.song-item{
+    border: 1px solid black;
+    width: 60%;
+    margin: 10px auto;
+    padding: 5px 0;
+    border-radius: 20px;
+    cursor: pointer;
+    list-style: none;
+}
+
+
+.song-item:hover{
+   background-color: rgb(169, 181, 193);
+}
+
+
