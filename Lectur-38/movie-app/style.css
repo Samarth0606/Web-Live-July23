@@ -1,0 +1,41 @@
+
+
+h1{
+    text-align: center;
+}
+input{
+    width: 400px;
+    display: block;
+    margin: 10px auto;
+    font-size: 25px;
+}
+button{
+    width: 120px;
+    display: block;
+    margin: 10px auto;
+    font-size: 20px;
+}
+img{
+    width: 200px;
+    height: 250px;
+    margin: 10px;
+}
+figure{ border: 2px solid black;}
+#list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+h2,h5{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+
+
+
+
+
