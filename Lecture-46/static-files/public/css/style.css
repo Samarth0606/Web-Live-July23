@@ -1,0 +1,14 @@
+h1{
+    font-size: 50px;
+    color: red;
+    border: 5px solid black;
+}
+
+p{
+    background-color: bisque;
+}
+
+ul{
+    text-decoration: line-through;
+    list-style: none;
+}
