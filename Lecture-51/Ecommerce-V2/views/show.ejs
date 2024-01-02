@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/star.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+    <h1>Displaying a particular product</h1>
+
+    <section class="row">
+
+
+        <div class="col-6 border">
+
+            <h1><%=foundProduct.name%></h1>
+            <img src="<%=foundProduct.img%>" alt="">
+            <h3><%=foundProduct.price%></h3>
+            <p><%=foundProduct.desc%></p>
+            
+        </div>
+
+        <div class="col-6 border">
+            <h1>Rating Form</h1>
+            <form action="/products/<%=foundProduct._id%>/rating" method="POST">
+                <label for="star">Rating:</label>
+                <!-- <input type="range" min="0" max="5" name="rating" id="star"> -->
+                <fieldset class="starability-basic">
+                    <input type="radio" id="no-rate" class="input-no-rate" name="rating" value="0" checked aria-label="No rating." />
+                    <input type="radio" id="first-rate1" name="rating" value="1" />
+                    <label for="first-rate1" title="Terrible">1 star</label>
+                    <input type="radio" id="first-rate2" name="rating" value="2" />
+                    <label for="first-rate2" title="Not good">2 stars</label>
+                    <input type="radio" id="first-rate3" name="rating" value="3" />
+                    <label for="first-rate3" title="Average">3 stars</label>
+                    <input type="radio" id="first-rate4" name="rating" value="4" />
+                    <label for="first-rate4" title="Very good">4 stars</label>
+                    <input type="radio" id="first-rate5" name="rating" value="5" />
+                    <label for="first-rate5" title="Amazing">5 stars</label>
+                </fieldset>
+
+                <br>
+                <label for="textt">Rating:</label>
+                <textarea name="comment" id="textt" rows="3"></textarea>
+                <br>
+                <button type="submit">ADD REVIEW</button>
+            </form>
+        </div>
+
+        <div class="border">
+            <% for(let review of foundProduct.reviews){ %>
+                <h2>Rating: </h2>
+                <h2 class="starability-result" data-rating="<%=review.rating%>">
+                    Rated: <%=review.rating%> stars
+                </h2>
+                <h5>Comment: <%=review.comment%></h5>
+                <!-- <h3>Time: <%=review.createdAt%></h3> -->
+                <% if(review.createdAt){ %>
+                    <h5>Time: <%=review.createdAt.toDateString()%></h5>
+                <% } %>
+            <% } %>
+        </div>
+
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
