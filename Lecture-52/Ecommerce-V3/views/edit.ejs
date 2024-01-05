@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+    
+    <h1>Edit Product Form</h1>
+
+    <form class="needs-validation" action="/products/<%=foundProduct._id%>?_method=PATCH" method="POST" novalidate>
+        <div>
+            <label for="naam">Name: </label>
+            <input type="text" name="name" id="naam" value="<%=foundProduct.name%>" required>
+        </div>
+        <div>
+            <label for="pic">Image: </label>
+            <input type="text" name="img" id="pic" value="<%=foundProduct.img%>">
+        </div>
+        <div>
+            <label for="daam">Price: </label>
+            <input type="text" name="price" id="daam" value="<%=foundProduct.price%>" required>
+        </div>
+        <div>
+            <label for="des">Description: </label>
+           <textarea name="desc" id="des" rows="3"> <%=foundProduct.name%> </textarea>
+        </div>
+        <button type="submit">Edit Product</button>
+    </form>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script>
+            (() => {
+                'use strict'
+
+                // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                const forms = document.querySelectorAll('.needs-validation')
+
+                // Loop over them and prevent submission
+                Array.from(forms).forEach(form => {
+                    form.addEventListener('submit', event => {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
+
+                    form.classList.add('was-validated')
+                    }, false)
+                })
+            })()
+    </script>
+</body>
+</html>
