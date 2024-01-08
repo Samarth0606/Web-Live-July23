@@ -1,0 +1,16 @@
+:root{
+    --main-color: #0077b6;
+}
+main{
+    margin-top: 5.5rem;
+}
+
+.img{
+    height: 300px;
+    width: 100%;
+
+}
+
+.product-card .btnn{
+    background-color: var(--main-color) ;
+}
