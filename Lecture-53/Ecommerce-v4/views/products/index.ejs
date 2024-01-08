@@ -1,0 +1,28 @@
+
+
+<%-include('../partials/header')%>
+<%-include('../partials/navbar')%>
+<%-include('../partials/flash')%>
+
+<div class="row mt-5">
+    
+
+    <% for(let item of products){ %>
+
+        <div class="col-lg-4 product-card">
+            <div class="card text-center shadow mt-3 mx-auto" style="width: 18rem;">
+                <img class="img" src="<%=item.img%>" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h3 class="card-title"> <%= item.name %> </h3>
+                  <h5 class="card-title"> Rs: <%= item.price %> </h5>
+                  <p class="card-text"> <%= item.desc %> </p>
+                  <p class="card-text"> <%= item.instock %> </p>
+                  <a href="/products/<%=item._id%>" class="btn btnn btn-primary">View Product</a>
+                </div>
+            </div>
+        </div>
+        
+    <% } %>
+</div>
+
+<%-include('../partials/footer')%>
