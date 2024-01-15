@@ -28,7 +28,7 @@ const validateReview = (req,res,next)=>{
 const isLoggedIn = (req,res,next)=>{
 
     if(req.xhr && !req.isAuthenticated()){
-        return res.json({msg : 'you need to login first'})
+        return res.status(401).send('unauthorised');
         // console.log(req.xhr);//ajax hai ya nhi hai?
     }
 

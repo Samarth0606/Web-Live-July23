@@ -12,7 +12,7 @@ router.post('/products/:productId/like' , isLoggedIn , async(req,res)=>{
     }else{
         await User.findByIdAndUpdate(req.user._id , {$addToSet: {wishlist : productId} })
     }
-    // console.log(isLiked);
+    res.status(201).send('ok');
 })
 
 
