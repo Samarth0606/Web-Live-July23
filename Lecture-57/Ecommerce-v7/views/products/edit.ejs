@@ -1,0 +1,59 @@
+<%-include('../partials/header')%>
+<%-include('../partials/navbar')%>
+<%-include('../partials/flash')%>
+
+
+<div class="row" style="margin-top: 80px;">
+    <div class="col-6 mx-auto">
+        <form action="/products/<%=foundProduct._id%>?_method=PATCH" method="POST" class="needs-validation" novalidate>
+            <div class="mb-3">
+                <label for="naam" class="form-label">Name: </label>
+                <input type="text" class="form-control" name="name" id="naam" placeholder="Name of Product" value="<%=foundProduct.name%>" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+                <div id="validationServer03Feedback" class="invalid-feedback">
+                    Please provide a valid city.
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="imge" class="form-label">Image Url: </label>
+                <input type="text" class="form-control" name="img" id="imge" placeholder="Image URL of Product" value="<%=foundProduct.img%>" required >
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+                <div id="validationServer03Feedback" class="invalid-feedback">
+                    Please provide a valid city.
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="paisa" class="form-label">Price: </label>
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">Rs. </span>
+                    <input class="form-control" type="number" name="price" id="paisa" placeholder="Price of Product" value="<%=foundProduct.price%>" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                    <div id="validationServer03Feedback" class="invalid-feedback">
+                        Please provide a valid city.
+                    </div>
+                </div>
+            </div>
+        
+            <div class="mb-3">
+                <label for="des" class="form-label">Description: </label>
+                <textarea class="form-control"  name="desc" id="des" rows="5" placeholder="Description of Product" required><%=foundProduct.desc%></textarea>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+                <div id="validationServer03Feedback" class="invalid-feedback">
+                    Please provide a valid city.
+                </div>
+            </div>
+            <button type="submit" class="btn btn-sm btn-success">Save Changes</button>
+        </form>
+    </div>
+</div>
+
+
+<%-include('../partials/footer')%>
